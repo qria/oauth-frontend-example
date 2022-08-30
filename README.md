@@ -30,14 +30,20 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Your task is to implement a OAuth2.0 backend server. 
 
+User should be able to access the site, and login if not already logged in.
+
+### Technical Details
+
 There are two pages in this site, one is homepage `/` and one is login page `/login`.
 
-When user visits the homepage, 
+When user visits the homepage, it tries to call backend (`http://0.0.0.0:8000/users/me`) with the cookie.
 
-it tries to call backend with the cookie
+Backend should check the cookie to authenticate the user and return a json response with a 'nickname' key.
 
-Replace `href="#"` part in `pages/login.js` file to your oauth login address.
+If the server returns 403, user is redirected to login page, with a button linking to `http://0.0.0.0:8000/login`.
 
+Note the difference in `localhost` and `0.0.0.0`. This is to simulate the production environment where frontend and backend domain might be different.
 
+### Success Page
 
 ![](./success.png)
