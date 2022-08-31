@@ -7,7 +7,7 @@ export default function Login() {
         <h1 className={styles.title}>
           You are not logged in!
         </h1>
-        <a href="http://0.0.0.0:8000/login" className={styles.card}>
+        <a href="http://0.0.0.0:8000/auth/login" className={styles.card}>
           Log in  →
         </a>
       </main>
